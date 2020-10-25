@@ -1,0 +1,73 @@
+<{$header}>
+<{$feedback}>
+
+<P><{$lang_youcanpost}>
+<P><FONT COLOR="RED"><B><{$lang_note}>: </B></FONT><{$lang_youcanpostbybrowse}>
+<P>
+<FORM ACTION="submit.php" METHOD="POST">
+ <INPUT TYPE="HIDDEN" NAME="post_changes" VALUE="y">
+ <INPUT TYPE="HIDDEN" NAME="type" VALUE="snippet">
+<INPUT TYPE="HIDDEN" NAME="changes" VALUE="<{$lang_firstposted}>">
+ <TABLE>
+  <TR class="odd">
+   <TD COLSPAN="2">
+    <B><{$lang_title}>:</B>
+    <BR>
+    <INPUT TYPE="TEXT" NAME="name" SIZE="45" MAXLENGTH="60">
+   </TD>
+  </TR>
+  <TR>
+   <TD COLSPAN="2" class="odd">
+    <B><{$lang_desc}>:</B>
+    <BR>
+    <{$xoops_codes}><{$xoops_smilies}>
+     </TD>
+  </TR>
+  <TR class="odd">
+   <td>
+    <B><{$lang_type}>:</B>
+    <BR>
+    <{$category_seltypbox}>  <BR>
+      </TD>
+   <TD>
+    <B><{$lang_license}>:</B>
+    <BR>
+    <{$category_sellicbox}></TD>
+  </TR>
+  <TR class="odd">
+   <TD>
+    <B><{$lang_language}>:</B>
+    <BR>
+    <{$category_sellanbox}> <BR>
+      </TD>
+   <TD>
+    <B><{$lang_category}>:</B>
+    <BR>
+    <{$category_selcatbox}>  <BR>
+     </TD>
+  </TR>
+  <TR class="odd">
+   <TD COLSPAN="2">
+    <B><{$lang_version}>:</B>
+    <BR>
+    <INPUT TYPE="TEXT" NAME="version" SIZE="10" MAXLENGTH="15">
+   </TD>
+  </TR>
+  <TR class="odd">
+   <TD COLSPAN="2">
+    <B><{$lang_pastecode}>:</B>
+    <BR>
+<B><{$lang_note}>: </B><{$lang_tags}>
+<br>
+    <TEXTAREA NAME="code" ROWS="30" COLS="85" WRAP="SOFT"></TEXTAREA>
+    </TD>
+  </TR>
+  <TR>
+   <TD COLSPAN="2" ALIGN="MIDDLE">
+    <B><{$lang_snippetsubmitmes}></B>
+    <BR>
+    <input type="submit" name="submit" class="button" value="<{$lang_submit}>">&nbsp;<input type="button" value="<{$lang_cancel}>" onclick="javascript:history.go(-1)">
+      </TD>
+  </TR>
+ </TABLE>
+</FORM>

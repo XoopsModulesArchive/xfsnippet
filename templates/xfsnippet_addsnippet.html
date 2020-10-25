@@ -1,0 +1,47 @@
+<{$header}>
+<{$feedback}>
+<P><{$lang_youcanpost}>
+<P><FONT COLOR="RED"><B><{$lang_note}>: </B></FONT><{$lang_youcanpostbybrowse}>
+<P>
+<FORM ACTION="addversion.php" METHOD="POST">
+<INPUT TYPE="HIDDEN" NAME="post_changes" VALUE="y">
+<INPUT TYPE="HIDDEN" NAME="type" VALUE="snippet">
+<INPUT TYPE="HIDDEN" NAME="snippet_id" VALUE="<{$snippet_id}>">
+ <TABLE>
+  
+  
+  
+  <TR class="odd">
+   <TD COLSPAN="2">
+    <B><{$lang_version}>:</B>
+    <BR>
+    <INPUT TYPE="TEXT" NAME="version" SIZE="10" MAXLENGTH="15">
+   </TD>
+  </TR>
+  
+  <TR>
+   <TD COLSPAN="2" class="odd">
+    <B><{$lang_changes}>:</B>
+    <BR>
+    <{$xoops_codes}><{$xoops_smilies}>
+     </TD>
+  </TR>
+  
+  <TR class="odd">
+   <TD COLSPAN="2">
+    <B><{$lang_pastecode}>:</B>
+    <BR>
+<B><{$lang_note}>: </B><{$lang_tags}>
+<br>
+    <TEXTAREA NAME="code" ROWS="30" COLS="85" WRAP="SOFT"></TEXTAREA>
+    </TD>
+  </TR>
+  <TR>
+   <TD COLSPAN="2" ALIGN="MIDDLE">
+    <B><{$lang_snippetsubmitmes}></B>
+    <BR>
+    <input type="submit" name="submit" class="button" value="<{$lang_submit}>">&nbsp;<input type="button" value="<{$lang_cancel}>" onclick="javascript:history.go(-1)">
+      </TD>
+  </TR>
+ </TABLE>
+</FORM>
